@@ -2,18 +2,42 @@
 <html>
   <head>
         <script src="index.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <title>EUPH</title>
   </head>
   <body>
+
     <div class="heading">
         <h1>euph,</h1>
-        <h5>a bookmark manager.</h5>
+        <h5>a bookmark visualizer.</h5>
     </div>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-    <p>this is a test</p>
+
+    <div id = "mainContent">
+      <div  class="bookmarkButton"> 
+      <input type="file" id = "file">
+      </div>
+
+      <div id="tester" style="width:600px;height:250px;"></div>
+      <script>
+          TESTER = document.getElementById('tester');
+          Plotly.plot( TESTER, [{
+          x: [1, 2, 3, 4, 5],
+          y: [1, 2, 4, 8, 16] }], {
+          margin: { t: 0 } } );
+        </script>
+
+
+    </div>
+  
+
+
+    <footer>
+    We are using node <script>document.write(process.versions.node)</script>,<br>
+    Chrome <script>document.write(process.versions.chrome) </script>,<br>
+    and Electron <script>document.write(process.versions.electron)</script>.<br>
+    this is a work in progress, clearly
+    </footer>
   </body>
 </html>
