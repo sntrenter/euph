@@ -1,2 +1,2 @@
 # euph
-to get a job, I need a project. : (
+This is a project to work with plotly!
